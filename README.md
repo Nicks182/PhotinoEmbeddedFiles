@@ -55,7 +55,7 @@ Full Program class:
 
 ![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/06b9723b-4a9f-42f9-8196-92fda3a9ea87)
 
-### 7. CSS and Script tags
+### 7. Style and Script tags
 
 Lastly, we need to add our style and script file to our html page like below. Note the : is important for our handlers to work.
 
@@ -65,10 +65,44 @@ Lastly, we need to add our style and script file to our html page like below. No
 
 ![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/5c67471d-aeab-4139-ae3d-6d5363ef7c30)
 
+### 8. Test it
+
+The app should run now if you hit F5 in Visual Studio. When the window first opens it will show an alert. Close the alert and click the button to send a message to the C# code. The C# code will just send the message straight back and you will see another alert.
+
+
+### 9. Publish it
+
+Right click the project and select Publish. 
+
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/3727f767-4e6a-42a1-89b2-dbf75c0057d1)
+
+A new window will open up. Select Folder, click Next, select Folder again, click Next again. Now click the Browse button and choose where you would like to publish the files. Click Finish, then Close. You should see the below image…
+
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/a8d611e4-3ace-401b-9394-d3094313761e)
+
+Now click Show all settings and copy the image below. 
+
+Deployment mode = Self-contained. This means you won’t need to install .net on the system you want to run the app on as it will contain all it needs to do so on it’s own.
+
+Target Runtime = win-x64. This needs to match the OS you wish to run the app on. I’m on Windows 10 x64 so I need to select win-x64.
+
+Produce single file = true. So we create a single exe file.
+
+Trim unused code is optional.
+
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/164e2231-4f51-4181-95ff-d945704c7800)
+
+Click save and then click the big Publish button at the top of the screen. Once done you should see the following 4 files in your publish folder.
+
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/d07b570c-6f8d-4e88-abf6-74443b7256e1)
+
+Yes… it’s not really a single file. Depending on the dll, it can’t always be put into a single file. In this case I believe it’s because they are C++. The .pdb file is not needed to run the app though.
+
+Double click the exe to run the app.
+
 ## Additional info
 I often end up having a lot of small individual script and style files which I end up bundling together.
 
 To bundle your files you can use something like: [BundlerMinifier](https://github.com/madskristensen/BundlerMinifier)
 
 I’m currently using a more up to date version: [BundlerMinifierPlus](https://github.com/salarcode/BundlerMinifierPlus)
-

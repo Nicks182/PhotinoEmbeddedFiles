@@ -19,14 +19,12 @@ namespace PhotinoEmbeddedFiles
                 .RegisterCustomSchemeHandler("mycss", (object sender, string scheme, string url, out string contentType) =>
                 {
                     contentType = "text/css";
-                    var filename = url.Replace("mycss:", "");
-                    return _GetFileStream(filename);
+                    return _GetFileStream("style.css");
                 })
                 .RegisterCustomSchemeHandler("myjs", (object sender, string scheme, string url, out string contentType) =>
                 {
                     contentType = "text/javascript";
-                    var filename = url.Replace("myjs:", "");
-                    return _GetFileStream(filename);
+                    return _GetFileStream("script.js");
                 })
 
                 .RegisterWindowCreatedHandler(Win_WindowCreated)
@@ -35,9 +33,6 @@ namespace PhotinoEmbeddedFiles
             Win.WaitForClose();
 
         }
-
-        
-
 
         private static void Win_WindowCreated(object? sender, EventArgs e)
         {
@@ -49,8 +44,6 @@ namespace PhotinoEmbeddedFiles
         const string FileDomain = "PhotinoEmbeddedFiles.Assets.";
         private static string _GetFileString(string filename)
         {
-            var asm = Assembly.GetExecutingAssembly();
-
             var sr = new StreamReader(_GetFileStream(filename));
 
             return sr.ReadToEnd();

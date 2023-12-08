@@ -17,6 +17,8 @@ Start by creating a new simple Console Application. I’m using DotNet 8.0, but 
 
 ### 3. Embedding files
 
+Start by creating an Assets folder and add your own files or use the ones in this repository.
+
 You can manually embed any file by right clicking the file and editing its properties. I normally add a wild card to my project file. Here’s how.
 
 Right click the project file and go to Edit Project File:

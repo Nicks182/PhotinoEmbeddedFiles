@@ -25,7 +25,9 @@ Right click the project file and go to Edit Project File:
 
 Add the highlighted part like in the image below. You can name your folder something other than Assets. Now anything you place in that directory will be Embedded into the exe automatically and you don’t have to do it with each file you wish to add.
 
-![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/fdaf1eb6-cdb3-4031-bccb-01dd9669d142)
+Also set the OutputType to WinExe so we don’t get a console window.
+
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/b071e989-e27c-48fb-b206-fee82e23d52a)
 
 ### 4. Some code to read our embedded files.
 

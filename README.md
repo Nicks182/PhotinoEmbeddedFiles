@@ -1,5 +1,4 @@
 # PhotinoEmbeddedFiles
-Showing how to use Photino with Embedded files to create a single exe
 
 Using [Photino.io](https://www.tryphotino.io) allows us to create cross platform desktop applications using HTML, javascript, and CSS with C# as your backend.
 

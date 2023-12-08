@@ -43,23 +43,27 @@ You can structure this Assets folder how you like, just remember to ensure that 
 
 Now we need to register a Custom Scheme Handler for our script file and our style file. In short, our HTML file can’t read our embedded files directly. We need a handler to find the right resource and return it to our page.
 
-![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/75667a5c-4f0f-4521-aa2f-2803c58e0ac4)
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/f74d9127-46a9-4415-bcd0-62ff8fb1c8be)
 
 ### 6. Get html file
 
 We also need to read our index.html file and pass it as a string to our photino window.
 
-![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/50ac7127-cae4-4735-86be-4041e22fa5f8)
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/298a0540-cc1b-4b3a-99bd-b6dfe77526ca)
 
 Full Program class:
 
-![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/943a6ca2-b3a0-4e8e-a7e7-9de24a608738)
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/06b9723b-4a9f-42f9-8196-92fda3a9ea87)
 
 ### 7. CSS and Script tags
 
 Lastly, we need to add our style and script file to our html page like below. Note the : is important for our handlers to work.
 
-![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/d1d5426d-6e4a-42b4-86c4-97299ff39c6a)
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/0a45bd2f-3051-4875-98d8-c5a41aeaaaa9)
+
+### NOTE: “mycss:” and “myjs:” is how our handlers will know when to respond.
+
+![image](https://github.com/Nicks182/PhotinoEmbeddedFiles/assets/13113785/5c67471d-aeab-4139-ae3d-6d5363ef7c30)
 
 ## Additional info
 I often end up having a lot of small individual script and style files which I end up bundling together.
@@ -67,3 +71,4 @@ I often end up having a lot of small individual script and style files which I e
 To bundle your files you can use something like: [BundlerMinifier](https://github.com/madskristensen/BundlerMinifier)
 
 I’m currently using a more up to date version: [BundlerMinifierPlus](https://github.com/salarcode/BundlerMinifierPlus)
+

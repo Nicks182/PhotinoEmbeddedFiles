@@ -15,23 +15,36 @@ namespace PhotinoEmbeddedFiles
         [STAThread]
         private static void Main(string[] args)
         {
-            PhotinoWindow Win = new PhotinoWindow()
-                .RegisterCustomSchemeHandler("mycss", (object sender, string scheme, string url, out string contentType) =>
-                {
-                    contentType = "text/css";
-                    return _GetFileStream("style.css");
-                })
-                .RegisterCustomSchemeHandler("myjs", (object sender, string scheme, string url, out string contentType) =>
-                {
-                    contentType = "text/javascript";
-                    return _GetFileStream("script.js");
-                })
+            PhotinoWindow Wind = new PhotinoWindow();
+            
+            Wind.RegisterCustomSchemeHandler("mycss", (object sender, string scheme, string url, out string contentType) =>
+            {
+                contentType = "text/css";
+                return _GetFileStream("style.css");
+            });
+            
+            Wind.RegisterCustomSchemeHandler("myjs", (object sender, string scheme, string url, out string contentType) =>
+            {
+                contentType = "text/javascript";
+                return _GetFileStream("script.js");
+            });
 
-                .RegisterWindowCreatedHandler(Win_WindowCreated)
-                .LoadRawString(_GetFileString("index.html"));
+            Wind.LoadRawString(_GetFileString("index.html"));
 
-            Win.WaitForClose();
+            #region Addition functionality
+            Wind.RegisterWindowCreatedHandler(Win_WindowCreated);
 
+            Wind.RegisterWebMessageReceivedHandler((object sender, string message) =>
+            {
+                var window = (PhotinoWindow)sender;
+
+                // Send a message back the to JavaScript event handler.
+                // "window.external.receiveMessage(callback: Function)"
+                window.SendWebMessage("C# reveived the following message from the browser: " + message);
+            });
+            #endregion Addition functionality
+
+            Wind.WaitForClose();
         }
 
         private static void Win_WindowCreated(object? sender, EventArgs e)

@@ -9,7 +9,7 @@ https://github.com/Nicks182/PhotinoStaticFileServer
 
 ### Official Photino Samples
 
-Photino samples: https://github.com/tryphotino/photino.Samples
+https://github.com/tryphotino/photino.Samples
 
 ## The How
 ### 1. Create a new project

@@ -4,6 +4,13 @@ Using [Photino.io ](https://www.tryphotino.io/)  allows us to create cross platf
 
 This little project shows how to embed the html, script, css, and other asset files so you can produce a single exe. This way your assets won't be easily accessible inside the application directory and users can’t edit them.
 
+### See how to embed fiels using file server:
+https://github.com/Nicks182/PhotinoStaticFileServer
+
+### Official Photino Samples
+
+Photino samples: https://github.com/tryphotino/photino.Samples
+
 ## The How
 ### 1. Create a new project
 
